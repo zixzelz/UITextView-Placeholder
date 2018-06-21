@@ -179,7 +179,8 @@
         self.placeholderTextView.font = self.font;
         self.needsUpdateFont = NO;
     }
-    self.placeholderTextView.textAlignment = self.textAlignment;
+
+//    self.placeholderTextView.textAlignment = self.textAlignment;
 
     // `NSTextContainer` is available since iOS 7
     CGFloat lineFragmentPadding;
