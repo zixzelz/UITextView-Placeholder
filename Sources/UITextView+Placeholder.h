@@ -35,4 +35,8 @@ FOUNDATION_EXPORT const unsigned char UITextView_PlaceholderVersionString[];
 
 + (UIColor *)defaultPlaceholderColor;
 
+- (void)setPlaceholderTextAlignment:(NSTextAlignment)textAlignment;
+- (UIEdgeInsets)placeholderTextContainerInset;
+- (void)setPlaceholderTextContainerInset:(UIEdgeInsets)containerInset;
+
 @end
