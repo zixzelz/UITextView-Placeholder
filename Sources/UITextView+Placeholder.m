@@ -222,7 +222,7 @@
 
     self.placeholderTextView.textContainer.exclusionPaths = self.textContainer.exclusionPaths;
     self.placeholderTextView.textContainerInset = self.textContainerInset;
-    self.placeholderTextView.frame = self.bounds;
+    self.placeholderTextView.frame = UIEdgeInsetsInsetRect(self.bounds, self.placeholderTextContainerInset);
 }
 
 @end
