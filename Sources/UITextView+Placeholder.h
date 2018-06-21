@@ -32,11 +32,11 @@ FOUNDATION_EXPORT const unsigned char UITextView_PlaceholderVersionString[];
 @property (nonatomic, strong) IBInspectable NSString *placeholder;
 @property (nonatomic, strong) NSAttributedString *attributedPlaceholder;
 @property (nonatomic, strong) IBInspectable UIColor *placeholderColor;
+@property (nonatomic) UIEdgeInsets placeholderTextContainerInset;
+
 
 + (UIColor *)defaultPlaceholderColor;
 
 - (void)setPlaceholderTextAlignment:(NSTextAlignment)textAlignment;
-- (UIEdgeInsets)placeholderTextContainerInset;
-- (void)setPlaceholderTextContainerInset:(UIEdgeInsets)containerInset;
 
 @end
