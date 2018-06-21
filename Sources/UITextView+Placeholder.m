@@ -131,6 +131,26 @@
     [self updatePlaceholderTextView];
 }
 
+- (void)setPlaceholderTextAlignment:(NSTextAlignment)textAlignment {
+    self.placeholderTextView.textAlignment = textAlignment;
+}
+
+- (UIEdgeInsets)placeholderTextContainerInset {
+    NSValue *value = objc_getAssociatedObject(self, @selector(placeholderTextContainerInset));
+    if(value) {
+        UIEdgeInsets edgeInsets;
+        [value getValue:&edgeInsets];
+        return edgeInsets;
+    }else {
+        return UIEdgeInsetsZero;
+    }
+}
+
+- (void)setPlaceholderTextContainerInset:(UIEdgeInsets)containerInset {
+    NSValue *value = [NSValue value:&containerInset withObjCType:@encode(UIEdgeInsets)];
+    objc_setAssociatedObject(self, @selector(placeholderTextContainerInset), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 #pragma mark `placeholderColor`
 
 - (UIColor *)placeholderColor {
