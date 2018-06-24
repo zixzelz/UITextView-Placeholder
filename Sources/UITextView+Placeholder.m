@@ -147,7 +147,7 @@
 }
 
 - (void)setPlaceholderTextContainerInset:(UIEdgeInsets)placeholderTextContainerInset {
-    NSValue *value = [NSValue value:&containerInset withObjCType:@encode(UIEdgeInsets)];
+    NSValue *value = [NSValue value:&placeholderTextContainerInset withObjCType:@encode(UIEdgeInsets)];
     objc_setAssociatedObject(self, @selector(placeholderTextContainerInset), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
